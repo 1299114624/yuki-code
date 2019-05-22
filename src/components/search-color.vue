@@ -1,0 +1,77 @@
+<template>
+    <div class="search-md">
+        <div class="head-icon">{{title}}</div>
+        <el-input id="searchInput" :placeholder="placeholderTitle" clearable v-model="searchVal">
+            <i slot="suffix" class="el-input__icon el-icon-search"></i>
+        </el-input>
+    </div>
+</template>
+
+<script>
+export default {
+    props:{
+        placeholderTitle: String,
+        title: String,
+        level:{
+            type:Number,
+            default:3
+        }
+    },
+    data() {
+        return {
+            searchVal: ""
+        }
+    }
+}
+</script>
+
+<style lang="scss">
+.search-md {
+    background-color: rgba(36,42,72,1);
+    box-sizing: border-box;
+    width: 100%;
+    height: 130px;
+    $inputWidth:260px;
+    padding: 30px calc(50% - #{$inputWidth}) 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        margin-left: 280px;
+        background-color: #fff;
+    }
+    .el-input .el-input__inner{
+        height: 40px;
+        background-color: rgba(24,31,62,0.8);
+        border-color: #4b5375;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 10px;
+        &:focus{
+            border-color: #60b0ff;
+            color: #d6d9ed
+        }
+    }
+    .head-icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-left: 95px;
+        cursor: pointer;
+        color: #3dcca6;
+        height: 100%;
+        font-weight: bold;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        background: url('../assets/logo.png') no-repeat 0 50%
+    }
+}
+</style>
+

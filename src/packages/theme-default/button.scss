@@ -1,0 +1,62 @@
+@import './common/theme-var.scss';
+.yuki-button{
+    &.el-button.el-button--default{
+        height: 32px;
+        min-width: 96px;
+        padding: 0 20px;
+        border-radius: 1px;
+        background-color: $--button-background-color;
+        border-color: $--button-border-color;
+        color: $--button-color;
+        &:hover{
+            background-color: $--button-hover-background-color;
+            border-color: $--button-hover-border-color;
+            color: $--button-hover-color;
+        }
+        &:focus{
+            background-color: $--button-focus-background-color;
+            border-color: $--button-focus-background-color;
+            color: $--button-focus-color;
+            &:hover{
+                background-color: $--button-focus-hover-border-color;
+                border-color: $--button-focus-hover-border-color;
+            }
+        }
+        &.is-disabled{
+            background-color: $--button-disabled-background-color;
+            border-color: $--button-disabled-border-color;
+            color: $--button-disabled-color;
+        }
+        &.enhance{
+            background-color: $--enhance-button-color;
+            border-color: $--enhance-button-color;
+            &:hover{
+                background-color: $--enhance-button-hover-color;
+                border-color: $--enhance-button-hover-color;
+                color: $--color;
+            }
+            &:focus{
+                background-color: $--enhance-button-focus-color;
+                border-color: $--enhance-button-focus-color;
+                &.is-disabled{
+                    background-color: $--button-disabled-background-color;
+                    border-color: $--button-disabled-border-color;
+                    color: $--button-disabled-color;
+                }
+            }
+        }
+        &.el-button+.el-button{
+            margin-left: 10px;
+        }
+        &.el-button.is-loading:before{
+            background: none
+        }
+    }
+    .el-button-group{
+        .yuki-button{
+            &.el-button:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -133,17 +133,17 @@ code{
     margin: 20px 0
   }
 }
-@media (max-width:1400px) {
-  .container,
-  .page-container{
-    width: 1200px
-  }
-}
+// @media (max-width:1400px) {
+//   .container,
+//   .page-container{
+//     width: 1200px
+//   }
+// }
 @media (max-width:1200px) {
   .container,
   .page-container{
     width: 100%;
-    padding: 0 20px
+    // padding: 0 20px
   }
 }
 </style>

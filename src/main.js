@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import ElementUI from 'element-ui'
 import DemoBlock from './base/demo-block'
 import SideNav from './components/side-nav'
@@ -35,5 +36,6 @@ if(typeof window !== 'undefined' && window.Vue) {
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

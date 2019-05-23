@@ -2,7 +2,7 @@
     <div class="side-nav">
         <div class="versions">
             <span class="title">控件类型</span>
-            <el-radio-group v-model="radio">
+            <el-radio-group v-model="radio" @change="radioChange">
                 <el-radio label='NC'>NC版</el-radio>
                 <el-radio label='FH'>峰会版</el-radio>
             </el-radio-group>
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
     props:{
         data:Array,
@@ -51,6 +52,11 @@ export default {
             activeName:''
         }
     },
+    watch:{
+        radio(val){
+            this.updateComponentType(val)
+        }
+    },
     computed:{
         navData(){
             let curdata = this.data.filter(item => {
@@ -63,6 +69,14 @@ export default {
                 return tag
             })
             return curdata
+        }
+    },
+    methods:{
+        ...mapMutations({
+            updateComponentType:"UPDATE_COMPONENT_TYPE"
+        }),
+        radioChange(val){
+            this.$router.push({path:'/component'})
         }
     }
 }

@@ -18,7 +18,7 @@
 ```html
 <el-button class='yuki-button'>普通按钮</el-button>
 <el-button class='yuki-button enhance'>强调按钮</el-button>
-<yuki-button/>
+<yuki-button>普通按钮</yuki-button>
 ```
 
 

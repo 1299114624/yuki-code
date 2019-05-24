@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store'
 import navConfig from '../components/nav.config.js'
+import navMap from '../components/nav-map'
 Vue.use(Router)
 const view = (path,name) => () => import(`@/components/${path}${name}`)
 
@@ -36,7 +37,13 @@ const registerRoute = navConfig => {
 var route = registerRoute(navConfig);
 route = route.concat([{
   path: '/',
-  component: view('','Index')
+  component: view('','Index'),
+  children:[
+    {
+      path:'/',
+      component:navMap
+    }
+  ]
 }])
 var router = new Router({
   routes: route

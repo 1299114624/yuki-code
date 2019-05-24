@@ -11,7 +11,7 @@ export default [
                 'path':'/installation'
             },
             {
-                'name':'色彩',
+                'title':'色彩',
                 'path':'/color'
             }
         ]
@@ -20,14 +20,27 @@ export default [
         'name':'基础控件',
         'children':[
             {
-                'name':'按钮',
+                'title':'按钮',
                 'path':'/button'
             },
             {
-                'name':'输入框',
+                'title':'输入框',
                 'path':'/input'
             }
         ]
-    }
+    },
+    {
+        'name':'容器',
+        'children':[
+            {
+                'title':'主面板',
+                'path':'/panel'
+            },
+            {
+                'title':'折叠面板',
+                'path':'/collapse'
+            }
+        ]
+    },
 
 ]

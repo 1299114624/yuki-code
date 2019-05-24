@@ -1,5 +1,7 @@
 <template>
-    <el-button class="yuki-button" @click="click">test</el-button>
+    <el-button class="yuki-button" @click="click">
+        <slot/>
+    </el-button>
 </template>
 
 <script>

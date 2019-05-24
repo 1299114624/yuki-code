@@ -1,6 +1,13 @@
 <template>
    <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
-       <searchColor :placeholderTitle='"搜索控件"' :title='"控件库"' :level="2"/>
+       <searchColor 
+       :placeholderTitle='"搜索控件"' 
+       :title='"控件库"' 
+       :level="2"
+       @clickIcon="clickIcon"
+       :data="curSearchData"
+       @change="changePath"
+       />
        <div class="page-container page-component">
             <el-scrollbar class="page-component__nav">
                 <side-nav :data="navsData" :base = "'/component'"/>
@@ -78,6 +85,16 @@ export default {
                 return tag
             })
             console.log('1111111curSearchData',this.curSearchData)
+        },
+        clickIcon(){
+            this.$router.push({path:'/nav-map'})
+        },
+        changePath(val){
+            if(!val.path) return;
+            let path = val.path[0];
+            let hasArr = location.hash.split("component");
+            path = hasArr[0] + "component" + path;
+            location.hash = path
         }
     }
 }

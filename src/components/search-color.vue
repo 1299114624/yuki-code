@@ -1,15 +1,23 @@
 <template>
     <div class="search-md">
-        <div class="head-icon">{{title}}</div>
+        <div class="head-icon" @click="click">{{title}}</div>
         <el-input id="searchInput" :placeholder="placeholderTitle" clearable v-model="searchVal">
             <i slot="suffix" class="el-input__icon el-icon-search"></i>
         </el-input>
+        <put-color :val='searchVal' :data='data' :level='level'></put-color>
     </div>
 </template>
 
 <script>
+import putColor from './put-color'
 export default {
+    components:{
+        putColor
+    },
     props:{
+        data:{
+            type:Array
+        },
         placeholderTitle: String,
         title: String,
         level:{
@@ -20,6 +28,15 @@ export default {
     data() {
         return {
             searchVal: ""
+        }
+    },
+    methods:{
+        handle(val) {
+            this.$emit('change',val);
+            this.searchVal = ""
+        },
+        click(){
+            this.$emit('clickIcon');
         }
     }
 }

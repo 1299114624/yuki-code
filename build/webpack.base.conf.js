@@ -48,8 +48,14 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
+    // path: path.resolve(__dirname,'./dist'),
+    // publicPath:'/dist/',
+    // filename:'yuki-npm.js',
+    // library:'yuki-npm.js',
+    // libraryTarget:'umd',
+    // umdNamedDefine:true
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    // filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath

@@ -11,12 +11,12 @@ export default {
             'version':null,
             'children':[
                 {
-                    'title':'开始',
+                    'title':'installation 开始',
                     'path':'/installation',
                     'content':[]
                 },
                 {
-                    'title':'色彩',
+                    'title':'color 色彩',
                     'path':'/color',
                     'content':[]
                 }
@@ -27,7 +27,7 @@ export default {
             'version':null,
             'children':[
                 {
-                    'name':'按钮',
+                    'title':'Button 按钮',
                     'path':'/button',
                     'content':[
                         'Button 按钮',
@@ -39,12 +39,28 @@ export default {
                     ]
                 },
                 {
-                    'name':'输入框',
+                    'title':'Input 输入框',
                     'path':'/input',
                     'content':[]
                 }
             ]
-        }
+        },
+        {
+            'name':'容器',
+            'version':null,
+            'children':[
+                {
+                    'title':'Panel 主面板',
+                    'path':'/panel',
+                    'content':[]
+                },
+                {
+                    'title':'Collapse 折叠面板',
+                    'path':'/collapse',
+                    'content':[]
+                }
+            ]
+        },
     ],
     'zh_en_map':{
         '/button':{

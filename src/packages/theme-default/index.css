@@ -1,0 +1,66 @@
+.yuki-button.el-button.el-button--default {
+  height: 32px;
+  min-width: 96px;
+  padding: 0 20px;
+  border-radius: 1px;
+  background-color: transparent;
+  border-color: #4b5375;
+  color: #fff;
+}
+
+.yuki-button.el-button.el-button--default:hover {
+  background-color: transparent;
+  border-color: #60b0ff;
+  color: #60b0ff;
+}
+
+.yuki-button.el-button.el-button--default:focus {
+  background-color: #2d6acd;
+  border-color: #2d6acd;
+  color: #fff;
+}
+
+.yuki-button.el-button.el-button--default:focus:hover {
+  background-color: #60b0ff;
+  border-color: #60b0ff;
+}
+
+.yuki-button.el-button.el-button--default.is-disabled {
+  background-color: #181e39;
+  border-color: #32395b;
+  color: #616884;
+}
+
+.yuki-button.el-button.el-button--default.enhance {
+  background-color: #3399ff;
+  border-color: #3399ff;
+}
+
+.yuki-button.el-button.el-button--default.enhance:hover {
+  background-color: #60b0ff;
+  border-color: #60b0ff;
+  color: #fff;
+}
+
+.yuki-button.el-button.el-button--default.enhance:focus {
+  background-color: #2d6acd;
+  border-color: #2d6acd;
+}
+
+.yuki-button.el-button.el-button--default.enhance:focus.is-disabled {
+  background-color: #181e39;
+  border-color: #32395b;
+  color: #616884;
+}
+
+.yuki-button.el-button.el-button--default.el-button + .el-button {
+  margin-left: 10px;
+}
+
+.yuki-button.el-button.el-button--default.el-button.is-loading:before {
+  background: none;
+}
+
+.yuki-button .el-button-group .yuki-button.el-button:not(:last-child) {
+  margin-right: 10px;
+}

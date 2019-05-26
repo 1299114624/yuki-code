@@ -11,6 +11,10 @@ export default [
                 'path':'/installation'
             },
             {
+                'title':'Webpack 配置',
+                'path':'/webpack'
+            },
+            {
                 'title':'色彩',
                 'path':'/color'
             }
@@ -23,6 +27,7 @@ export default [
                 'title':'按钮',
                 'path':'/button'
             },
+
             {
                 'title':'输入框',
                 'path':'/input'

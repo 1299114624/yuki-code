@@ -18,7 +18,7 @@ export default {
         dataA:{
             type:Array
         },
-        //zh_en_map对象
+        //nav.search.js的zh_en_map对象
         dataB:{
             type:Object
         }
@@ -55,7 +55,7 @@ export default {
         buildContentData(){
             let self = this;
             self.getHash();
-            //zh-CN数组
+            //nav.search.js的zh-CN数组
             let getData = self.dataA;
             for(let i=0,l=getData.length;i<l;i++){
                 if(getData[i].path){
@@ -77,6 +77,7 @@ export default {
                 self.showTag = false
             } else {
                 self.showTag = true;
+                //菜单栏左侧相对位置
                 self.initLeft()
             }
         },

@@ -64,4 +64,11 @@
 |-------|-------|-------|----------|-------|
 |size   |尺寸   |string   |medium/small/mini     |- |
 |type   |类型   |string   |primary/success/warning/danger/info/text     |- |
-|plain  |是否朴素
+|plain  |是否朴素|boolean   |-      |flase|
+|round  |是否圆角按钮|boolean   |-      |flase|
+|circle  |是否圆形按钮|boolean   |-      |flase|
+|loading  |是否加载中状态|boolean   |-      |flase|
+|disabled  |是否禁用状态|boolean   |-      |flase|
+|icon  |图标类名|string   |-      |-    |
+|autofocus  |是否默认聚焦|boolean   |-      |flase|
+|native-type  |原生type属性|string   |button/submit/reset|button|

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// dropMenu菜单
 import putColor from './put-color'
 export default {
     components:{

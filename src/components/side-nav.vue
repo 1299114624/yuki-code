@@ -100,6 +100,8 @@ export default {
     }
     ul{
         overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
     .theme{
         display: flex;

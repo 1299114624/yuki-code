@@ -36,9 +36,13 @@
 </template>
 
 <script>
+// 左侧菜单栏数据
 import navsData from './nav.config.js'
+// 搜索框及锚点跳转的数据
 import searchData from './nav.search.js'
+// 搜索框
 import searchColor from './search-color'
+// 右侧锚点菜单
 import articleMenu from './article-menu'
 import {mapState} from 'vuex'
 export default {

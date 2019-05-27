@@ -91,7 +91,7 @@ export default {
             console.log('1111111curSearchData',this.curSearchData)
         },
         clickIcon(){
-            this.$router.push({path:'/nav-map'})
+            this.$router.push({path:'/component/nav-map'})
         },
         changePath(val){
             if(!val.path) return;

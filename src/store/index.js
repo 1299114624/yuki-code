@@ -8,6 +8,6 @@ export default new Vuex.Store({
     getters,
     state:{
         componentType:'NC',
-        routeChange:false
+        routeChange:0
     }
 })

@@ -16,17 +16,24 @@
             <li class="nav-item">
                 <el-collapse accordion v-model="activeName">
                     <el-collapse-item
-                    v-for="item in navData"
+                    v-for="(item,i) in navData"
                     :key="item.name"
                     :name='item.name'
                     :title="item.name"
+                    :class="{itemLink:!item.children,sBlue:classItem[i]}"
+                    @click.native="toPath(item.path,i)"
                     >
                         <ul class="pure-menu-list sub-nav" v-if="item.children">
                             <li class="nav-item"
-                            v-for="navItem in item.children"
+                            v-for="(navItem,j) in item.children"
                             :key="navItem.name"
                             >
-                                <router-link v-text="navItem.title || navItem.name" :to='base + navItem.path'></router-link>
+                                <router-link 
+                                v-text="navItem.title || navItem.name" 
+                                :to='base + navItem.path'
+                                @click.native="routerLinkClick(i)"
+                                active-class="active"
+                                ></router-link>
                             </li>
                         </ul>
                     </el-collapse-item>
@@ -49,7 +56,8 @@ export default {
     data(){
         return{
             radio:'NC',
-            activeName:''
+            activeName:'',
+            classItem:{}
         }
     },
     watch:{
@@ -77,6 +85,19 @@ export default {
         }),
         radioChange(val){
             this.$router.push({path:'/component'})
+        },
+        toPath(path,index){
+            if(path){
+                this.classItem = {};
+                this.$set(this.classItem, index, true);
+                let hasArr = location.hash.split("component");
+                path = hasArr[0] + "component" + path;
+                location.hash = path;
+            }
+        },
+        routerLinkClick(index){
+            this.classItem = {};
+            this.$set(this.classItem, index, true);
         }
     }
 }
@@ -162,9 +183,20 @@ export default {
             text-indent: 20px;
             border-bottom: 1px solid rgba(204,204,204,1);
             &:hover,
-            &:active{
+            &.active{
                 color: #409eff;
             }
+        }
+        .itemLink{
+            .el-collapse-item__arrow{
+                display: none;
+            }
+            div[role="tabpanel"]{
+                display: none;
+            }
+        }
+        .sBlue .el-collapse-item__header{
+            color: #409eff !important;
         }
     }
 }

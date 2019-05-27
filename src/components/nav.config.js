@@ -24,12 +24,12 @@ export default [
         'name':'基础控件',
         'children':[
             {
-                'title':'按钮',
+                'title':'button 按钮',
                 'path':'/button'
             },
 
             {
-                'title':'输入框',
+                'title':'input 输入框',
                 'path':'/input'
             }
         ]
@@ -38,11 +38,11 @@ export default [
         'name':'容器',
         'children':[
             {
-                'title':'主面板',
+                'title':'panel 主面板',
                 'path':'/panel'
             },
             {
-                'title':'折叠面板',
+                'title':'collapse 折叠面板',
                 'path':'/collapse'
             }
         ]

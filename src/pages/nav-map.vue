@@ -15,16 +15,21 @@
 </template>
 
 <script>
-const base_src = require("../assets/images/jibenxinxi.png")
-const nav_src = require("../assets/images/jibenxinxi.png")
+const base_src = require("../assets/images/all-fill.png")
+const nav_src = require("../assets/images/paper-plane.png")
+const container_src = require("../assets/images/databaseset-fill.png")
 const iconArr = [
     {
         src: base_src,
         name: "基础控件"
     },
     {
-        src: base_src,
-        name: "容器"
+        src: nav_src,
+        name: "导航类"
+    },
+    {
+        src: container_src,
+        name: "容器类"
     },
 ]
 import navsData from '../components/nav.config.js'

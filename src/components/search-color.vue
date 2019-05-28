@@ -88,7 +88,7 @@ export default {
         font-size: 22px;
         display: flex;
         align-items: center;
-        background: url('../assets/logo.png') no-repeat 0 50%
+        background: url('../assets/diqiu.svg') no-repeat 0 50%
     }
 }
 </style>

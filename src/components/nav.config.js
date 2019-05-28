@@ -24,25 +24,73 @@ export default [
         'name':'基础控件',
         'children':[
             {
-                'title':'button 按钮',
+                'title':'Button 按钮',
                 'path':'/button'
             },
-
             {
-                'title':'input 输入框',
+                'title':'Input 输入框',
                 'path':'/input'
+            },
+            {
+                'title':'Radio 单选按钮',
+                'path':'/radio'
+            },
+            {
+                'title':'Switch 开关',
+                'path':'/switch'
+            },
+            {
+                'title':'Checkbox 多选框',
+                'path':'/check-box'
+            },
+            {
+                'title':'Select 下拉列表',
+                'path':'/select'
+            },
+            {
+                'title':'Table 表格',
+                'path':'/table'
+            },
+        ]
+    },
+    {
+        'name':'导航类',
+        'children':[
+            {
+                'title':'Breadcrumb 面包屑路径',
+                'path':'/breadcrumb'
+            },
+            {
+                'title':'Tree 树形控件',
+                'path':'/tree'
+            },
+            {
+                'title':'NavMenu 导航菜单',
+                'path':'/nav-menu'
             }
         ]
     },
     {
-        'name':'容器',
+        'name':'容器类',
         'children':[
             {
-                'title':'panel 主面板',
-                'path':'/panel'
+                'title':'Block 块',
+                'path':'/block'
             },
             {
-                'title':'collapse 折叠面板',
+                'title':'MainContainer 主容器',
+                'path':'/main-container'
+            },
+            {
+                'title':'DetailPanel 详情面板',
+                'path':'/detail-panel'
+            },
+            {
+                'title':'Tab 页签',
+                'path':'/tab'
+            },
+            {
+                'title':'Collapse 折叠面板',
                 'path':'/collapse'
             }
         ]

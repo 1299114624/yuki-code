@@ -13,22 +13,33 @@ Vue.use(ElementUI)
 Vue.component('demo-block',DemoBlock)
 Vue.component('side-nav',SideNav)
 
-import YukiButton from './packages/button/src/main'
-const components = [YukiButton]
-const install = function(Vue) {
-  if(install.installed) {
+// import YukiButton from './packages/button/src/main'
+// const components = [YukiButton]
+// const install = function(Vue) {
+//   if(install.installed) {
+//     return
+//   }
+//   components.map(component => Vue.component(component.name,component))
+// }
+// if(typeof window !== 'undefined' && window.Vue) {
+//   install(Vue)
+// }
+// export default {
+//   install,
+//   YukiButton
+// }
+
+const requireComponent = require.context('./packages', true, /\w+\.js$/)
+requireComponent.keys().forEach(fileName => {
+  const componentConfig = requireComponent(fileName);
+  if(componentConfig.default.installed) {
     return
   }
-  components.map(component => Vue.component(component.name,component))
-}
-if(typeof window !== 'undefined' && window.Vue) {
-  install(Vue)
-}
+  if(typeof window !== 'undefined' && window.Vue){
+    componentConfig.default.install(Vue)
+  }
+})
 
-export default {
-  install,
-  YukiButton
-}
 
 // new Vue({
 //   template: '<yuki-button class="enhance">试验</yuki-button>'

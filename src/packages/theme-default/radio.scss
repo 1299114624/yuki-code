@@ -1,0 +1,60 @@
+@import './common/theme-var.scss';
+.yuki-radio{
+    .el-radio__input{
+        .el-radio__inner{
+            width: 16px;
+            height: 16px;
+            border: 1px solid $--radio-radio_inner-border-color;
+            background: $--radio-radio_inner-background-color;
+            &:after{
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background-color: $--radio-radio_inner-after-background-color;
+            }
+            &:hover{
+                border-color: $--radio-radio_inner-hover-border-color;
+            }
+        }
+    }
+    &:focus:not(.is-focus):not(:active){
+        .el-radio__input{
+            .el-radio__inner{
+                box-shadow: none;
+            }
+        }
+    }
+    .el-radio__label{
+        font-size: 14px;
+        color: $--radio-el-radio__label-color;
+    }
+    &.is-checked{
+        .el-radio__input{
+            .el-radio__inner{
+                background: $--radio-is-checked-background-color;
+                border-color: $--radio-is-checked-background-color;
+                &:after{
+                    width: 6px;
+                    height: 6px;
+                    background: $--radio-is-checked-after-background-color;
+                }
+            }
+            &.is-checked+.el-radio__label{
+                font-size: 14px;
+                color: $--color;
+            }
+        }
+    }
+    &.is-disabled{
+        .el-radio__input.is-disabled{
+            .el-radio__inner{
+                background: $--radio-is-disabled-background-color;
+                border-color: $--radio-is-disabled-border-color;
+            }
+            &.is-disabled+el.el-radio__label{
+                font-size: 14px;
+                color: $--radio-is-disabled-color;
+            }
+        }
+    }
+}

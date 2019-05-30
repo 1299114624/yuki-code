@@ -8,7 +8,7 @@ import ElementUI from 'element-ui'
 import DemoBlock from './base/demo-block'
 import SideNav from './components/side-nav'
 import 'element-ui/lib/theme-chalk/index.css'
-import './packages/theme-default/index.css'
+// import './packages/theme-default/index.css'
 Vue.use(ElementUI)
 Vue.component('demo-block',DemoBlock)
 Vue.component('side-nav',SideNav)

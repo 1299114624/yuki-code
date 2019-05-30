@@ -16,6 +16,7 @@ export default {
         putColor
     },
     props:{
+        //nav.search.js第一个
         data:{
             type:Array
         },

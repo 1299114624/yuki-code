@@ -56,6 +56,57 @@ export default {
                     'title':'Input 输入框',
                     'path':'/input',
                     'content':[]
+                },
+                {
+                    'title':'Radio 单选按钮',
+                    'path':'/radio',
+                    'content':[
+                        'Radio 单选按钮',
+                        '基本用法',
+                        'Radio Attributes',
+                        'Radio Events',
+                        'Radio-group Attributes'
+                    ]
+                },
+                {
+                    'title':'Switch 开关',
+                    'path':'/switch',
+                    'content':[]
+                },
+                {
+                    'title':'Checkbox 多选框',
+                    'path':'/check-box',
+                    'content':[]
+                },
+                {
+                    'title':'Select 下拉列表',
+                    'path':'/select',
+                    'content':[]
+                },
+                {
+                    'title':'Table 表格',
+                    'path':'/table',
+                    'content':[]
+                },
+            ]
+        },
+        {
+            'name':'导航类',
+            'children':[
+                {
+                    'title':'Breadcrumb 面包屑路径',
+                    'path':'/breadcrumb',
+                    'content':[]
+                },
+                {
+                    'title':'Tree 树形控件',
+                    'path':'/tree',
+                    'content':[]
+                },
+                {
+                    'title':'NavMenu 导航菜单',
+                    'path':'/nav-menu',
+                    'content':[]
                 }
             ]
         },
@@ -64,8 +115,23 @@ export default {
             'version':null,
             'children':[
                 {
-                    'title':'Panel 主面板',
-                    'path':'/panel',
+                    'title':'Block 块',
+                    'path':'/block',
+                    'content':[]
+                },
+                {
+                    'title':'MainContainer 主容器',
+                    'path':'/main-container',
+                    'content':[]
+                },
+                {
+                    'title':'DetailPanel 详情面板',
+                    'path':'/detail-panel',
+                    'content':[]
+                },
+                {
+                    'title':'Tab 页签',
+                    'path':'/tab',
                     'content':[]
                 },
                 {
@@ -96,5 +162,13 @@ export default {
             '使用 jsp 模板':'shi-yong-jsp-mo-ban',
             '有三方件依赖 vue 模块':'you-san-fang-jian-yi-lai-vue-mo-kuai',
         },
+        '/radio':{
+            'Radio 单选按钮':'radio dan-xuan-an-niu',
+            '基本用法':'ji-ben-yong-fa',
+            'Radio Attributes':'radio-attributes',
+            'Radio Events':'radio-events',
+            'Radio-group Attributes':'radio-group-attributes'
+        },
+
     }
 }

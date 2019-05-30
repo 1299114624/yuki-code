@@ -11,3 +11,19 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props:{
+        jsfiddle:{
+            type:Object
+        },
+        content:{
+            type:Object
+        }
+    },
+    mounted(){
+        console.log(this.jsfiddle,this.content)
+    }
+}
+</script>

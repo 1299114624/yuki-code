@@ -51,6 +51,10 @@ export default [
                 'title':'Table 表格',
                 'path':'/table'
             },
+            {
+                'title':'Transfer 双向选择器',
+                'path':'/transfer'
+            }
         ]
     },
     {

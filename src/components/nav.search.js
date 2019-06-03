@@ -88,6 +88,11 @@ export default {
                     'path':'/table',
                     'content':[]
                 },
+                {
+                    'title':'Transfer 双向选择器',
+                    'path':'/transfer',
+                    'content':[]
+                },
             ]
         },
         {

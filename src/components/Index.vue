@@ -88,7 +88,7 @@ export default {
                 }
                 return tag
             })
-            console.log('1111111curSearchData',this.curSearchData)
+            // console.log('1111111curSearchData',this.curSearchData)
         },
         clickIcon(){
             this.$router.push({path:'/component/nav-map'})

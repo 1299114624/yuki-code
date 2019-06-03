@@ -1,0 +1,49 @@
+@import './common/theme-var.scss';
+.yuki-transfer{
+    display: flex;
+    .yuki-transfer-tree{
+        width: 348px;
+        background: $--transfer-background-color;
+        border: 1px solid $--transfer-border-color;
+        .transfer-header{
+            .yuki-checkbox{
+                margin-left: 24px;
+            }
+            height: 39px;
+            border-bottom: 1px solid $--transfer-border-color;
+            padding: 0 10px;
+            line-height: 40px;
+            background: $--transfer-top-background-color;
+            .header-label{
+                margin-left: 70px;
+                color:$--transfer-top-color;
+                font-size: 14px;
+            }
+            .yuki-checkbox{
+                .is-indeterminate{
+                    .el-checkbox__inner::before{
+                        height: 8px;
+                        width: 8px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%) scale(1);
+                        background: $--transfer-el-checkbox__inner-before-background-color;
+                    }
+                }
+            }
+        }
+        .tree-body{
+            padding: 10px;
+        }
+    }
+    .action-container{
+        margin: auto 30px;
+        .yuki-button{
+            min-width: 60px;
+            display: block;
+            +.yuki-button{
+                margin: 10px 0px 0px 0px !important;
+            }
+        }
+    }
+}

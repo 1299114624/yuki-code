@@ -1,4 +1,6 @@
 $--color:#fff;
+$--color-transparent: transparent;
+
 //button
 $--button-background-color: transparent;
 $--button-border-color: #4b5375;
@@ -27,3 +29,49 @@ $--radio-is-disabled-color: #616884;
 $--radio-radio_inner-after-background-color: #fff;
 $--radio-is-disabled-border-color: #31395e;
 $--radio-is-checked-after-background-color: #fff;
+
+//transfer 双向选择器
+$--transfer-background-color: #151a30;
+$--transfer-border-color: #4b5375;
+$--transfer-top-background-color: #1c223d;
+$--transfer-top-color: #a8acbd;
+$--transfer-button-color: #fff;
+$--transfer-button-hover-color: #60b0ff;
+$--transfer-button-disabled-color: #616884;
+$--transfer-button-disabled-background-color: #181e39;
+$--transfer-button-disabled-border-color: #32395b;
+$--transfer-el-checkbox__inner-before-background-color: #39f;
+
+//check-box 多选框
+$--checkbox-inner-background-color: rgba(24,31,62,0.8);
+$--checkbox-border-origin-color: #4b5375;
+$--checkbox-border-color: #60b0ff;
+$--checkbox-label-color: #fff;
+$--checkbox-hover-bordered-color: #4b5375;
+$--checkbox-bordered-label-color: #fff;
+$--checkbox-checked-label-color: $--color;
+$--checkbox-checked-bordered-border-color: #3399ff;
+$--checkbox-disabled-background-color: #31395e;
+$--checkbox-disabled-border-color: #171e3b;
+$--checkbox-is-checked-two-color: $--checkbox-border-color;
+$--checkbox-disabled-label-color: #616884;
+$--checkbox-disabled-bordered-label-color: #616884;
+
+//tree
+$--tree-color: #d6d9ed;
+$--tree-checkbox__inner-bg-color: rgba(24,31,62,0.6);
+$--tree-checkbox__inner-border-color: #4b5375;
+$--tree-disabled-color: rgba(24,31,62,0.6);
+$--tree-disabled-border-color: #31395e;
+$--tree-font-disabled-color: #616884;
+$--tree-node__content-hover-bg-color: #1d3c6b;
+$--tree-blue-color: #3399ff;
+$--tree-node-focus-content-bg-color: rgba(51,153,255,0.5);
+$--tree-highlight-bg-color: rgba(51,153,255,0.5);
+$--tree-indeterminate-checkbox__inner-border-color: #4b5375;
+$--tree-indeterminate-checkbox__inner-before-color: #fff;
+$--tree-indeterminate-disabled-checkbox__inner-border-color: #31395e;
+$--tree-indeterminate-disabled-checkbox__inner-color: #5a607e;
+$--tree-indeterminate-disabled-checkbox__inner-bg-color: rgba(24,31,62,0.6);
+$--tree-is-current-disabled-expand-icon-border-color: #3399ff;
+$--tree-is-current-disabled-expand-icon-lable-color: #fff;

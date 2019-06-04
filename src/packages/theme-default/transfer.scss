@@ -2,7 +2,8 @@
 .yuki-transfer{
     display: flex;
     .yuki-transfer-tree{
-        width: 348px;
+        width: 348px !important;
+        min-height: 100px;
         background: $--transfer-background-color;
         border: 1px solid $--transfer-border-color;
         .transfer-header{

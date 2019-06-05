@@ -22,7 +22,7 @@
             }
             .yuki-checkbox{
                 .is-indeterminate{
-                    .el-checkbox__inner::before{
+                    .el-checkbox__inner::before { 
                         height: 8px;
                         width: 8px;
                         top: 50%;

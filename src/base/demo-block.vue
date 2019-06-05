@@ -1,5 +1,5 @@
 <template>
-    <div class="demo-block">
+    <div class="demo-block" :class="[blockClass]">
         <div class="source">
             <slot name="source"/>
             <div class="description" v-if="$slots.default">
@@ -23,7 +23,12 @@ export default {
         }
     },
     mounted(){
-        console.log(this.jsfiddle,this.content)
+        // console.log(this.jsfiddle,this.content)
+    },
+    computed:{
+        blockClass(){
+            return `demo-${this.$router.currentRoute.path.split('/').pop()}`
+        }
     }
 }
 </script>

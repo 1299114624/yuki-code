@@ -91,7 +91,13 @@ export default {
                 {
                     'title':'Transfer 双向选择器',
                     'path':'/transfer',
-                    'content':[]
+                    'content':[
+                        'Transfer 双向选择器',
+                        '基础用法',
+                        'Attributes',
+                        'Data',
+                        'Events',
+                    ]
                 },
             ]
         },
@@ -168,11 +174,18 @@ export default {
             '有三方件依赖 vue 模块':'you-san-fang-jian-yi-lai-vue-mo-kuai',
         },
         '/radio':{
-            'Radio 单选按钮':'radio dan-xuan-an-niu',
+            'Radio 单选按钮':'radio-dan-xuan-an-niu',
             '基本用法':'ji-ben-yong-fa',
             'Radio Attributes':'radio-attributes',
             'Radio Events':'radio-events',
             'Radio-group Attributes':'radio-group-attributes'
+        },
+        '/transfer':{
+            'Transfer 双向选择器':'transfer-shuang-xiang-xuan-ze-qi',
+            '基础用法':'ji-chu-yong-fa',
+            'Attributes':'attributes',
+            'Data':'data',
+            'Events':'events',
         },
 
     }

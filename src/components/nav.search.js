@@ -76,7 +76,13 @@ export default {
                 {
                     'title':'Checkbox 多选框',
                     'path':'/check-box',
-                    'content':[]
+                    'content':[
+                        'Checkbox 多选框',
+                        '基础用法',
+                        '多选框组',
+                        'Indeterminate 状态',
+                        '可选项目数量的限制',
+                    ]
                 },
                 {
                     'title':'Select 下拉列表',
@@ -186,6 +192,13 @@ export default {
             'Attributes':'attributes',
             'Data':'data',
             'Events':'events',
+        },
+        '/check-box':{
+            'Checkbox 多选框': 'checkbox-duo-xuan-kuang',
+            '基础用法': 'ji-chu-yong-fa',
+            '多选框组': 'duo-xuan-kuang-zu',
+            'Indeterminate 状态': 'indeterminate-zhuang-tai',
+            '可选项目数量的限制': 'ke-xuan-xiang-mu-shu-liang-de-xian-zhi',
         },
 
     }

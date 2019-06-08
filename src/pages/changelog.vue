@@ -2,7 +2,7 @@
     <div class="page-changelog">
         <div class="heading">
             <el-button class="fr">
-                <a href="">Release 地址</a>
+                <a href="https://github.com/1299114624/yuki/releases/" target="_blank">Release 地址</a>
             </el-button>
             更新日志
         </div>

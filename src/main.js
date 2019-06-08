@@ -1,5 +1,3 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -15,6 +13,13 @@ Vue.component('side-nav',SideNav)
 
 // import YukiButton from './packages/button/src/main'
 // const components = [YukiButton]
+
+// let components = []
+// const requireComponent = require.context('./packages', true, /\w+\.js$/)
+// requireComponent.keys().forEach(fileName => {
+//   const componentConfig = requireComponent(fileName);
+//   components.push(componentConfig.default)
+// })
 // const install = function(Vue) {
 //   if(install.installed) {
 //     return
@@ -26,7 +31,7 @@ Vue.component('side-nav',SideNav)
 // }
 // export default {
 //   install,
-//   YukiButton
+//   ...components.name
 // }
 
 const requireComponent = require.context('./packages', true, /\w+\.js$/)
@@ -39,12 +44,6 @@ requireComponent.keys().forEach(fileName => {
     componentConfig.default.install(Vue)
   }
 })
-
-
-// new Vue({
-//   template: '<yuki-button class="enhance">试验</yuki-button>'
-// }).$mount('#app')
-
 
 new Vue({
   router,

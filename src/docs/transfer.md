@@ -227,10 +227,6 @@ export default{
 .demo-block.demo-transfer .source {
     width:78%;
 }
-.demo-block .meta .highlight{
-    max-height:500px;
-    overflow:auto;
-}
 </style>
 
 ## Transfer 双向选择器
@@ -287,30 +283,29 @@ export default {
     },
     methods:{
         change(type,data) {
-            if(data){
-                console.log(222,data.id,data)
-                let newData = []
+            //相当触发了getter
+            data = JSON.parse(JSON.stringify(data))
+            console.log(222,data.id,data)
+            let newData = []
+            if(type === 'checked') {
+                this.data.checkedList.push(...data);
+                this.data.spareList.forEach(res=>{
+                    if(this.isInclude(res,data)){
+                        newData.push(res)
+                    }
+                })
+                this.data.spareList = [...newData]
+            } else{
                 this.data.spareList.push(...data);
-                if(type === 'checked') {
-                    this.data.checkedList.push(...data);
-                    this.data.spareList.forEach(res=>{
-                        if(this.isInclude(res,data)){
-                            newData.push(res)
-                        }
-                    })
-                    this.data.spareList = [...newData]
-                } else{
-                    this.data.spareList.push(...data);
-                    this.data.checkedList.forEach(res=>{
-                        if(this.isInclude(res,data)){
-                            newData.push(res)
-                        }
-                    })
-                    this.data.checkedList = [...newData]
-                }
+                this.data.checkedList.forEach(res=>{
+                    if(this.isInclude(res,data)){
+                        newData.push(res)
+                    }
+                })
+                this.data.checkedList = [...newData]
             }
         },
-        include(val,data) {
+        isInclude(val,data) {
             let count = 0;
             data.forEach(res=>{
                 if(val.id === res.id){
@@ -321,7 +316,7 @@ export default {
                 return false
             }
             return true
-        }
+        },
     }
 }
 </script>

@@ -75,6 +75,10 @@ code{
     width: 50%;
     justify-content: space-between;
     flex-direction: column;
+    .highlight{
+        max-height:500px;
+        overflow:auto;
+    }
   }
   .description {
     padding: 10px 0 ;

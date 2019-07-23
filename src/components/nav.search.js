@@ -74,6 +74,11 @@ export default {
                     'content':[]
                 },
                 {
+                    'title':'Steps 步骤条',
+                    'path':'/steps',
+                    'content':[]
+                },
+                {
                     'title':'Checkbox 多选框',
                     'path':'/check-box',
                     'content':[

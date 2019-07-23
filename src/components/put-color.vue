@@ -122,6 +122,7 @@ export default {
                         let searchIndex = matchVal.search(re);
                         if(searchIndex !== -1 && searchVal) {
                             back.push(this.splitArr(searchVal,matchVal,fullVal,parentName))
+                    console.log(back)
                         }
                     }
                 })

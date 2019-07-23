@@ -174,6 +174,7 @@ export default {
     }
     .title{
         font-weight: bold;
+        background: url('../assets/caidan.svg') no-repeat 0 50%;
         background-size: 14px 14px;
         padding-left: 20px;
     }

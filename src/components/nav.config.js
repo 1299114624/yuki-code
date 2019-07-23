@@ -48,6 +48,10 @@ export default [
                 'path':'/select'
             },
             {
+                'title':'Steps 步骤条',
+                'path':'/steps'
+            },
+            {
                 'title':'Table 表格',
                 'path':'/table'
             },

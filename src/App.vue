@@ -65,7 +65,7 @@ code{
   .show-demo{
     padding: 10px;
     background-color: #151a30;
-    height: (100% -20px);
+    height: calc(100% -20px);
     flex-grow: 1;
   }
   .meta{
@@ -107,7 +107,8 @@ code{
     }
   }
   .highlight{
-    // height: 100%;
+    height: calc(100%- 43px);
+    width: 100%;
     pre{
       margin: 0;
       height: 100%;
@@ -123,6 +124,70 @@ code{
       padding: 18px;
       &::before{
         content: none
+      }
+    }
+  }
+  .demo-block-control {
+    border-top: 1px solid #eaeefb;
+    height: 44px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    margin-top: -1px;
+    line-height: 44px;
+    color: #409eff;
+    position: relative;
+    &.is-fixed {
+      position: fixed;
+      bottom: 0;
+      width: 0;
+    }
+    i {
+      font-size: 16px;
+      line-height: 44px;
+      transition: 0.3s;
+      &.hovering {
+        transform: translateX(-40px);
+      }
+    }
+    .hide-icon {
+      color: #ccc;
+      cursor: pointer;
+      &:hover{
+        color: #409eff;
+        background-color: #f3f3f3;
+      }
+      span {
+        position: absolute;
+        transform: translateX(-30px);
+        font-size: 14px;
+        line-height: 44px;
+        transition: 0.3s;
+        display: inline-block;
+      }
+    }
+    &:hover{
+      color: #1d78d6;
+    }
+    .text-slide-enter,
+    .text-slide-leave-active{
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    .control-button{
+      padding: 0 20px;
+      height: 100%;
+      font-size: 14px;
+      width: 100%;
+      display: block;
+      &.ctrLeft{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
       }
     }
   }
@@ -195,12 +260,17 @@ html,body{
     }
   }
 }
-// @media (max-width:1400px) {
-//   .container,
-//   .page-container{
-//     width: 1200px
-//   }
-// }
+@media (max-width:1400px) {
+  .demo-block{
+    flex-direction: column;
+    .source{
+      width: 100%;
+    }
+    .meta{
+      width: 100%;
+    }
+  }
+}
 @media (max-width:1200px) {
   .container,
   .page-container{

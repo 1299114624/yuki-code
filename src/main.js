@@ -4,13 +4,15 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 import DemoBlock from './base/demo-block'
+import DemoEditor from './base/demo-editor'
 import SideNav from './components/side-nav'
 import 'element-ui/lib/theme-chalk/index.css'
 import './packages/theme-default/index.css'
 Vue.use(ElementUI)
 Vue.component('demo-block',DemoBlock)
+Vue.component('demo-editor',DemoEditor)
 Vue.component('side-nav',SideNav)
-
+Vue.prototype.$bus = new Vue()
 // import YukiButton from './packages/button/src/main'
 // const components = [YukiButton]
 

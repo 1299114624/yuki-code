@@ -31,6 +31,7 @@
                     <i class="el-icon-caret-top"></i>
                 </div>
             </transition>
+            <demo-editor/>
        </div>
    </el-scrollbar>
 </template>

@@ -161,6 +161,12 @@ export default {
         }
     }
     .nav-item{
+        .el-collapse-item__header {
+            background-color: transparent;
+        }
+        .el-collapse-item__wrap {
+            background-color: transparent;
+        }
         .el-collapse-item.is-active{
             div[role='tab']{
                 border-bottom: 1px solid rgba(204,204,204,1)
@@ -193,6 +199,9 @@ export default {
             }
             div[role="tabpanel"]{
                 display: none;
+            }
+            .el-collapse-item__header {
+                background-color: rgba(243,245,246,1) !important;
             }
         }
         .sBlue .el-collapse-item__header{

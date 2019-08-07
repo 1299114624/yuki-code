@@ -13,7 +13,7 @@
                     </el-tab-pane>
                 </el-tabs>
             </div>
-            <Com :config='config' class="editor-demo editor-comp"></Con>
+            <Com :config='config' class="editor-demo editor-comp"></Com>
         </div>
     </div>
 </template>
